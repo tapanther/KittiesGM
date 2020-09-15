@@ -1,0 +1,25 @@
+{% extends 'mkdocs.j2' -%}
+
+{% block site %}
+
+site_name: Magical Kitties (GM)
+theme:
+  name: material
+  custom_dir: 'yaml-wiki/theme'
+  palette:
+    primary: blue
+    accent: blue
+  favicon: 'img/favicon.ico'
+  icon:
+    logo: 'material/compass'
+repo_name: 'tapanther/KittiesGM'
+repo_url: 'https://github.com/tapanther/KittiesGM'
+site_url: 'https://tapanther.github.io/KittiesGM/'
+
+{% endblock %}
+{% block add_extensions %}
+  - pymdownx.details
+{% endblock %}
+{% block extra_css %}
+- stylesheets/custom_admonitions.css
+{% endblock %}

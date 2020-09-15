@@ -1,0 +1,59 @@
+
+site_name: Magical Kitties (GM)
+theme:
+  name: material
+  custom_dir: 'yaml-wiki/theme'
+  palette:
+    primary: blue
+    accent: blue
+  favicon: 'img/favicon.ico'
+  icon:
+    logo: 'material/compass'
+repo_name: 'tapanther/KittiesGM'
+repo_url: 'https://github.com/tapanther/KittiesGM'
+site_url: 'https://tapanther.github.io/KittiesGM/'
+
+  
+extra_css:
+  - stylesheets_lib/uml.css
+  - stylesheets/custom_admonitions.css
+  
+extra_javascript:
+  - js_lib/uml.js
+  - js_lib/mermaid.min.js
+#  - https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.6/mermaid.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.13.0/flowchart.min.js
+  
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.superfences :
+      custom_fences :
+        - name : flow
+          class : uml-flowchart
+          format : !!python/name:pymdownx.superfences.fence_div_format
+        - name : sequence
+          class : uml-sequence-diagram
+          format : !!python/name:pymdownx.superfences.fence_div_format
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.details
+
+nav:
+  - Home : index.md
+  - General :
+    - Timeline : Timeline.md
+  - Locations :
+    - Townswickhamcesterburgtonshireport : Town.md
+  - Missions :
+    - Hönkdra : Honkdra.md
+  - Categories :
+      - General : General.md
+      - Locations : Locations.md
+      - Missions : Missions.md
